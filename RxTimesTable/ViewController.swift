@@ -60,7 +60,7 @@ class ViewController: UIViewController {
         self.inputTextfield.delegate = self
         self.inputTextfield.rx.text.orEmpty
             .map{$0 as String}
-            .bind(to: viewModel.model.number)
+            .bind(to: viewModel.inputs.model.number)
             .disposed(by: disposeBag)
         
         viewModel.outputs.number
@@ -116,6 +116,7 @@ class ViewController: UIViewController {
         }
         var tableList:[String] = [String]()
         for num in orders {
+            // bounds error expected
             let mumltipy = String(number * num)
             tableList.append(mumltipy)
         }
@@ -130,6 +131,8 @@ extension ViewController : UITextFieldDelegate {
         let newString: NSString = currentString.replacingCharacters(in: range, with: string) as NSString
         let newLength: Int = newString.length
 
+        if newLength > 10 {return false}
+        
         switch textField {
         case inputTextfield:
             let utf8Char = string.cString(using: .utf8)

@@ -11,6 +11,7 @@ import RxSwift
 import RxCocoa
 
 protocol ViewModelInput {
+    var model: Model {get set}
     func request()
 }
 
@@ -24,10 +25,9 @@ protocol ViewModelType {
 }
 
 class ViewModel: ViewModelInput,ViewModelOutput,ViewModelType {
-    var model: Model
+    var model = Model(number: BehaviorRelay(value:""))
     
     init() {
-        model = Model(number: BehaviorRelay(value:""))
         self.number = model.number.asObservable()
     }
     
