@@ -26,7 +26,7 @@ class ViewController: UIViewController {
 
     let disposeBag = DisposeBag()
     var viewModel:ViewModel!
-    let strProperty = BehaviorRelay(value: "")
+//    let strProperty = BehaviorRelay(value: "")
     
     var resultList:[Int] = [Int]()
 
@@ -91,22 +91,28 @@ class ViewController: UIViewController {
         */
         
         self.outputLabel.rx.observe(String.self, "text")
-            .subscribe(onNext:{ text in
-                self.changeLabelValue(text: text!)
+            .subscribe(onNext: { text in
+                self.changeLabelValue(text: text!) { result in
+                    DispatchQueue.main.async {
+                        self.outputLabel.text = result
+                    }
+                }
             }).disposed(by: disposeBag)
     }
     
-    func changeLabelValue(text:String){
+    func changeLabelValue(text:String,completion: @escaping (String)->Void){
         let resultTextList = makeTableList(number: text)
         if resultTextList.isEmpty {return}
+        
         var resultStr:String = ""
+        var count:Int = 1
+        
         for result in resultTextList {
-            resultStr += result
+            resultStr += "\(text) * \(count) = \(result)"
             resultStr += "\n"
+            count += 1
         }
-        DispatchQueue.main.async {
-            self.outputLabel.text = resultStr
-        }
+        completion(resultStr)
     }
     
     func makeTableList(number:String)->[String]{
@@ -122,7 +128,6 @@ class ViewController: UIViewController {
         }
         return tableList
     }
-
 }
 
 extension ViewController : UITextFieldDelegate {
