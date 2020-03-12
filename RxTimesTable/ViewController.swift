@@ -32,17 +32,16 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        uiSetup()
+        setUp()
     }
 
-    func uiSetup() {
+    func setUp() {
         setUpInputTextfield()
         setUpOutputLabel()
     }
 
     func setUpInputTextfield() {
         self.inputTextfield = UITextField()
-//        self.inputTextfield.layer.borderWidth = 0.5
         self.inputTextfield.borderStyle = .roundedRect
         self.inputTextfield.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(inputTextfield)
@@ -54,25 +53,10 @@ class ViewController: UIViewController {
             make.height.equalToSuperview().multipliedBy(0.06)
         }
 
-        // inputTextfield의 데이터 스트림을 observer? 할 수 있는 기능이 필요
-//        self.inputTextfield.delegate = self
         self.inputTextfield.rx.text.orEmpty
             .map{$0 as String}
             .bind(to: viewModel.inputs.model.number)
             .disposed(by: disposeBag)
-        
-        /*
-        viewModel.outputs.numberOfString
-            .map{$0 as String}
-            .bind(to:self.outputLabel.rx.text)
-            .disposed(by: disposeBag)
-         */
-        
-//        self.strProperty
-//            .filter{$0.isEmpty == false}
-//            .subscribe(onNext:{
-//                print("result is : \($0)")
-//            }).disposed(by: disposeBag)
     }
 
     func setUpOutputLabel() {
@@ -98,7 +82,6 @@ class ViewController: UIViewController {
         
         self.outputLabel.rx.observe(String.self, "text")
             .subscribe(onNext: { text in
-//                print("result text is : \(text)")
                 DispatchQueue.main.async {
                     self.outputLabel.text = text
                 }
