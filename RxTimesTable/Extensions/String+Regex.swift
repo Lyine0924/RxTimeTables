@@ -11,7 +11,7 @@ import Foundation
 extension String {
     func hasCharaters() -> Bool {
         do {
-            let regrex = try NSRegularExpression(pattern: "^[0-9]$", options: .caseInsensitive)
+            let regrex = try NSRegularExpression(pattern: "^[0-9]+", options: .caseInsensitive)
             if let _ = regrex.firstMatch(in: self, options: NSRegularExpression.MatchingOptions.reportCompletion, range: NSMakeRange(0, self.count)) {
                 return true
             }

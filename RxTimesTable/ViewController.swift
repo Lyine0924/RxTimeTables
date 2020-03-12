@@ -21,19 +21,17 @@ import RxCocoa
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var inputTextfield: UITextField!
-    @IBOutlet weak var outputLabel: UILabel!
+    weak var inputTextfield: UITextField!
+    weak var outputLabel: UILabel!
 
     let disposeBag = DisposeBag()
-    var viewModel:ViewModel!
-//    let strProperty = BehaviorRelay(value: "")
+    var viewModel = ViewModel()
     
     var resultList:[Int] = [Int]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        viewModel = ViewModel()
         uiSetup()
     }
 
@@ -43,30 +41,32 @@ class ViewController: UIViewController {
     }
 
     func setUpInputTextfield() {
-
-        /*
         self.inputTextfield = UITextField()
+//        self.inputTextfield.layer.borderWidth = 0.5
+        self.inputTextfield.borderStyle = .roundedRect
+        self.inputTextfield.translatesAutoresizingMaskIntoConstraints = false
         self.view.addSubview(inputTextfield)
         
         self.inputTextfield.snp.makeConstraints{ make in
             make.leading.equalTo(30)
-            make.trailing.equalTo(30)
-            make.centerY.equalToSuperview().multipliedBy(0.3)
-            make.height.equalToSuperview().multipliedBy(0.2)
+            make.trailing.equalTo(-30)
+            make.top.equalTo(80)
+            make.height.equalToSuperview().multipliedBy(0.06)
         }
-        */
 
         // inputTextfield의 데이터 스트림을 observer? 할 수 있는 기능이 필요
-        self.inputTextfield.delegate = self
+//        self.inputTextfield.delegate = self
         self.inputTextfield.rx.text.orEmpty
             .map{$0 as String}
             .bind(to: viewModel.inputs.model.number)
             .disposed(by: disposeBag)
         
-        viewModel.outputs.number
+        /*
+        viewModel.outputs.numberOfString
             .map{$0 as String}
             .bind(to:self.outputLabel.rx.text)
             .disposed(by: disposeBag)
+         */
         
 //        self.strProperty
 //            .filter{$0.isEmpty == false}
@@ -76,79 +76,32 @@ class ViewController: UIViewController {
     }
 
     func setUpOutputLabel() {
-
-        /*
-        self.outputLabel = UILabel()
-        self.outputLabel.text = "test"
+        let label = UILabel()
+        label.backgroundColor = .white
+        label.numberOfLines = 20
+        label.translatesAutoresizingMaskIntoConstraints = false
+        
+        self.outputLabel = label
         self.view.addSubview(outputLabel)
         
         self.outputLabel.snp.makeConstraints{ make in
-            make.leading.equalTo(30)
-            make.trailing.equalTo(30)
+            make.leading.equalTo(inputTextfield.snp.leading)
+            make.trailing.equalTo(inputTextfield.snp.trailing)
             make.top.equalTo(inputTextfield.snp.bottom).offset(20)
-            make.height.equalToSuperview().multipliedBy(0.4)
+            make.height.equalToSuperview().multipliedBy(0.3)
         }
-        */
+        
+        viewModel.resultString
+        .map({$0 as String})
+        .bind(to:self.outputLabel.rx.text)
+        .disposed(by: disposeBag)
         
         self.outputLabel.rx.observe(String.self, "text")
             .subscribe(onNext: { text in
-                self.changeLabelValue(text: text!) { result in
-                    DispatchQueue.main.async {
-                        self.outputLabel.text = result
-                    }
+//                print("result text is : \(text)")
+                DispatchQueue.main.async {
+                    self.outputLabel.text = text
                 }
             }).disposed(by: disposeBag)
-    }
-    
-    func changeLabelValue(text:String,completion: @escaping (String)->Void){
-        let resultTextList = makeTableList(number: text)
-        if resultTextList.isEmpty {return}
-        
-        var resultStr:String = ""
-        var count:Int = 1
-        
-        for result in resultTextList {
-            resultStr += "\(text) * \(count) = \(result)"
-            resultStr += "\n"
-            count += 1
-        }
-        completion(resultStr)
-    }
-    
-    func makeTableList(number:String)->[String]{
-        let orders = [1,2,3,4,5,6,7,8,9]
-        guard let number = Int(number) else {
-            return []
-        }
-        var tableList:[String] = [String]()
-        for num in orders {
-            // bounds error expected
-            let mumltipy = String(number * num)
-            tableList.append(mumltipy)
-        }
-        return tableList
-    }
-}
-
-extension ViewController : UITextFieldDelegate {
-    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        let currentString: NSString = textField.text! as NSString
-        let newString: NSString = currentString.replacingCharacters(in: range, with: string) as NSString
-        let newLength: Int = newString.length
-
-        if newLength > 10 {return false}
-        
-        switch textField {
-        case inputTextfield:
-            let utf8Char = string.cString(using: .utf8)
-            let isBackSpace = strcmp(utf8Char, "\\b")
-
-            if string.hasCharaters() || isBackSpace == -92 {
-                return true
-            }
-            return false
-        default: break
-        }
-        return true
     }
 }
