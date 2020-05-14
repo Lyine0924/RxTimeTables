@@ -3,10 +3,11 @@
 
 target 'RxTimesTable' do
   # Comment the next line if you don't want to use dynamic frameworks
-  use_frameworks!
-  pod 'RxSwift'
-  pod 'RxCocoa'
+  use_modular_headers!
+  pod 'RxSwift', '~> 4.0'
+  pod 'RxCocoa', '~> 4.0'
   pod 'SnapKit'
+
   # Pods for RxTimesTable
 
   target 'RxTimesTableTests' do

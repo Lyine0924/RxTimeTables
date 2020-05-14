@@ -12,10 +12,11 @@ import RxCocoa
 
 protocol ViewModelInput {
     var model: Model {get set}
+    func request()
 }
 
 protocol ViewModelOutput {
-    var numberOfString: Observable<String> {get}
+    var number: Observable<String> {get}
 }
 
 protocol ViewModelType {
@@ -24,38 +25,25 @@ protocol ViewModelType {
 }
 
 class ViewModel: ViewModelInput,ViewModelOutput,ViewModelType {
-    var inputs: ViewModelInput {return self}
-    var outputs: ViewModelOutput {return self}
-    
-    var numberOfString: Observable<String>
     var model = Model(number: BehaviorRelay(value:""))
     
-    let disposeBag = DisposeBag()
-    let resultString = PublishSubject<String>()
-    
     init() {
-        self.numberOfString = model.number.asObservable()
-        self.numberOfString
-            .filter({
-                $0.hasCharaters()
-            })
-            .subscribe(onNext: {
-                self.makeTableList(number: $0)
-            }).disposed(by: disposeBag)
+        self.number = model.number.asObservable()
     }
     
-    private func makeTableList(number:String){
-        var result = ""
-        
-        guard let number = Int(number) else {
-            return
-        }
-        
-        for i in 1..<10 {
-            // bounds error expected
-            result += "\(number) * \(i) = \(String(number * i))"
-            result += "\n"
-        }
-        resultString.onNext(result)
+    var number: Observable<String>
+    
+    var inputs: ViewModelInput {return self}
+    
+    var outputs: ViewModelOutput {return self}
+    
+    func isValid(number:String)->Bool {
+        return number.hasCharaters()
+    }
+}
+
+extension ViewModel {
+    func request() {
+        print(inputs)
     }
 }

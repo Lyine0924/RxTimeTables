@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		32CD3BB58F46D34F7741D71D /* Pods_RxTimesTable_RxTimesTableUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A5F7FA5A1BEAC413F64E2CB7 /* Pods_RxTimesTable_RxTimesTableUITests.framework */; };
 		3E7D5AFD23F38FAD00AD456B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7D5AFC23F38FAD00AD456B /* AppDelegate.swift */; };
 		3E7D5B0123F38FAD00AD456B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7D5B0023F38FAD00AD456B /* ViewController.swift */; };
 		3E7D5B0423F38FAD00AD456B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E7D5B0223F38FAD00AD456B /* Main.storyboard */; };
@@ -18,8 +17,9 @@
 		3E7D5B2F23F3975B00AD456B /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7D5B2E23F3975B00AD456B /* Model.swift */; };
 		3E7D5B3123F3977300AD456B /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7D5B3023F3977300AD456B /* ViewModel.swift */; };
 		3E7D5B3423F39AED00AD456B /* String+Regex.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E7D5B3323F39AED00AD456B /* String+Regex.swift */; };
-		6C87D4384DFC69DCDCC81F1E /* Pods_RxTimesTable.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6A0D763C9B821A327E128315 /* Pods_RxTimesTable.framework */; };
-		6FA59B1CA4AAEBE28163E180 /* Pods_RxTimesTableTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 235D7F2373F03FD7E5010D09 /* Pods_RxTimesTableTests.framework */; };
+		5313B2D3EAEE8259E1B1866A /* libPods-RxTimesTable.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F0F22300CC807C787B35932 /* libPods-RxTimesTable.a */; };
+		6EBC082074EA8186CEE3F2B9 /* libPods-RxTimesTable-RxTimesTableUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D5DEC8E6085F86F3E5C853D0 /* libPods-RxTimesTable-RxTimesTableUITests.a */; };
+		EF50448DA2817C35F883A4E9 /* libPods-RxTimesTableTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C048AE3746B43ED0BF082771 /* libPods-RxTimesTableTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,8 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		235D7F2373F03FD7E5010D09 /* Pods_RxTimesTableTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxTimesTableTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FE96DD1D4FA250362ED44CF /* Pods-RxTimesTable-RxTimesTableUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTimesTable-RxTimesTableUITests.debug.xcconfig"; path = "Target Support Files/Pods-RxTimesTable-RxTimesTableUITests/Pods-RxTimesTable-RxTimesTableUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		38391BAC9D55603306E7ACC4 /* Pods-RxTimesTable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTimesTable.debug.xcconfig"; path = "Target Support Files/Pods-RxTimesTable/Pods-RxTimesTable.debug.xcconfig"; sourceTree = "<group>"; };
 		3E7D5AF923F38FAD00AD456B /* RxTimesTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxTimesTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E7D5AFC23F38FAD00AD456B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3E7D5B0023F38FAD00AD456B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -58,13 +57,14 @@
 		3E7D5B2E23F3975B00AD456B /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		3E7D5B3023F3977300AD456B /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		3E7D5B3323F39AED00AD456B /* String+Regex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Regex.swift"; sourceTree = "<group>"; };
-		6A0D763C9B821A327E128315 /* Pods_RxTimesTable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxTimesTable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8F3786F7EE8824EEB3787C92 /* Pods-RxTimesTableTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTimesTableTests.release.xcconfig"; path = "Target Support Files/Pods-RxTimesTableTests/Pods-RxTimesTableTests.release.xcconfig"; sourceTree = "<group>"; };
-		A5F7FA5A1BEAC413F64E2CB7 /* Pods_RxTimesTable_RxTimesTableUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxTimesTable_RxTimesTableUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		AFAEAAB9A00CFDBFA1C53926 /* Pods-RxTimesTable.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTimesTable.debug.xcconfig"; path = "Target Support Files/Pods-RxTimesTable/Pods-RxTimesTable.debug.xcconfig"; sourceTree = "<group>"; };
-		B4C460784708FB753F4F166F /* Pods-RxTimesTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTimesTable.release.xcconfig"; path = "Target Support Files/Pods-RxTimesTable/Pods-RxTimesTable.release.xcconfig"; sourceTree = "<group>"; };
-		DAEEFEC76A4FA0A65748B4AD /* Pods-RxTimesTableTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTimesTableTests.debug.xcconfig"; path = "Target Support Files/Pods-RxTimesTableTests/Pods-RxTimesTableTests.debug.xcconfig"; sourceTree = "<group>"; };
-		F9DE78DB59AADC475A97A2F2 /* Pods-RxTimesTable-RxTimesTableUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTimesTable-RxTimesTableUITests.release.xcconfig"; path = "Target Support Files/Pods-RxTimesTable-RxTimesTableUITests/Pods-RxTimesTable-RxTimesTableUITests.release.xcconfig"; sourceTree = "<group>"; };
+		8F0F22300CC807C787B35932 /* libPods-RxTimesTable.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RxTimesTable.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3980938E2E0BF92B49CEA81 /* Pods-RxTimesTableTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTimesTableTests.release.xcconfig"; path = "Target Support Files/Pods-RxTimesTableTests/Pods-RxTimesTableTests.release.xcconfig"; sourceTree = "<group>"; };
+		A9D50EEA5A40573A8EFB70BB /* Pods-RxTimesTableTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTimesTableTests.debug.xcconfig"; path = "Target Support Files/Pods-RxTimesTableTests/Pods-RxTimesTableTests.debug.xcconfig"; sourceTree = "<group>"; };
+		ADD322CD2A712863DB74E87D /* Pods-RxTimesTable.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTimesTable.release.xcconfig"; path = "Target Support Files/Pods-RxTimesTable/Pods-RxTimesTable.release.xcconfig"; sourceTree = "<group>"; };
+		C048AE3746B43ED0BF082771 /* libPods-RxTimesTableTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RxTimesTableTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB46FCAE4D43DE4F2A11CF3F /* Pods-RxTimesTable-RxTimesTableUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTimesTable-RxTimesTableUITests.debug.xcconfig"; path = "Target Support Files/Pods-RxTimesTable-RxTimesTableUITests/Pods-RxTimesTable-RxTimesTableUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		D5DEC8E6085F86F3E5C853D0 /* libPods-RxTimesTable-RxTimesTableUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RxTimesTable-RxTimesTableUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBBDC18FF39D038D73E71931 /* Pods-RxTimesTable-RxTimesTableUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTimesTable-RxTimesTableUITests.release.xcconfig"; path = "Target Support Files/Pods-RxTimesTable-RxTimesTableUITests/Pods-RxTimesTable-RxTimesTableUITests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C87D4384DFC69DCDCC81F1E /* Pods_RxTimesTable.framework in Frameworks */,
+				5313B2D3EAEE8259E1B1866A /* libPods-RxTimesTable.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,7 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6FA59B1CA4AAEBE28163E180 /* Pods_RxTimesTableTests.framework in Frameworks */,
+				EF50448DA2817C35F883A4E9 /* libPods-RxTimesTableTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,7 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				32CD3BB58F46D34F7741D71D /* Pods_RxTimesTable_RxTimesTableUITests.framework in Frameworks */,
+				6EBC082074EA8186CEE3F2B9 /* libPods-RxTimesTable-RxTimesTableUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,7 +103,7 @@
 				3E7D5B1D23F38FAF00AD456B /* RxTimesTableUITests */,
 				3E7D5AFA23F38FAD00AD456B /* Products */,
 				52F2D423C8D830399D2AB962 /* Pods */,
-				C4787B32EC1CE92356A87406 /* Frameworks */,
+				B4A0C62D81AD3D32339C3D25 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -178,22 +178,22 @@
 		52F2D423C8D830399D2AB962 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AFAEAAB9A00CFDBFA1C53926 /* Pods-RxTimesTable.debug.xcconfig */,
-				B4C460784708FB753F4F166F /* Pods-RxTimesTable.release.xcconfig */,
-				2FE96DD1D4FA250362ED44CF /* Pods-RxTimesTable-RxTimesTableUITests.debug.xcconfig */,
-				F9DE78DB59AADC475A97A2F2 /* Pods-RxTimesTable-RxTimesTableUITests.release.xcconfig */,
-				DAEEFEC76A4FA0A65748B4AD /* Pods-RxTimesTableTests.debug.xcconfig */,
-				8F3786F7EE8824EEB3787C92 /* Pods-RxTimesTableTests.release.xcconfig */,
+				38391BAC9D55603306E7ACC4 /* Pods-RxTimesTable.debug.xcconfig */,
+				ADD322CD2A712863DB74E87D /* Pods-RxTimesTable.release.xcconfig */,
+				CB46FCAE4D43DE4F2A11CF3F /* Pods-RxTimesTable-RxTimesTableUITests.debug.xcconfig */,
+				DBBDC18FF39D038D73E71931 /* Pods-RxTimesTable-RxTimesTableUITests.release.xcconfig */,
+				A9D50EEA5A40573A8EFB70BB /* Pods-RxTimesTableTests.debug.xcconfig */,
+				A3980938E2E0BF92B49CEA81 /* Pods-RxTimesTableTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		C4787B32EC1CE92356A87406 /* Frameworks */ = {
+		B4A0C62D81AD3D32339C3D25 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				6A0D763C9B821A327E128315 /* Pods_RxTimesTable.framework */,
-				A5F7FA5A1BEAC413F64E2CB7 /* Pods_RxTimesTable_RxTimesTableUITests.framework */,
-				235D7F2373F03FD7E5010D09 /* Pods_RxTimesTableTests.framework */,
+				8F0F22300CC807C787B35932 /* libPods-RxTimesTable.a */,
+				D5DEC8E6085F86F3E5C853D0 /* libPods-RxTimesTable-RxTimesTableUITests.a */,
+				C048AE3746B43ED0BF082771 /* libPods-RxTimesTableTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -205,11 +205,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E7D5B2323F38FAF00AD456B /* Build configuration list for PBXNativeTarget "RxTimesTable" */;
 			buildPhases = (
-				BD99772EADECABC169A43E3C /* [CP] Check Pods Manifest.lock */,
+				9FDDA9D925DA1C07A5D0E58B /* [CP] Check Pods Manifest.lock */,
 				3E7D5AF523F38FAD00AD456B /* Sources */,
 				3E7D5AF623F38FAD00AD456B /* Frameworks */,
 				3E7D5AF723F38FAD00AD456B /* Resources */,
-				79E12BAD7BC2BEA21A3372D5 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -224,7 +223,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E7D5B2623F38FAF00AD456B /* Build configuration list for PBXNativeTarget "RxTimesTableTests" */;
 			buildPhases = (
-				1250670AE91B5D96A620F774 /* [CP] Check Pods Manifest.lock */,
+				4F3D58A0C5F7289F757E85AC /* [CP] Check Pods Manifest.lock */,
 				3E7D5B0B23F38FAF00AD456B /* Sources */,
 				3E7D5B0C23F38FAF00AD456B /* Frameworks */,
 				3E7D5B0D23F38FAF00AD456B /* Resources */,
@@ -243,11 +242,10 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 3E7D5B2923F38FAF00AD456B /* Build configuration list for PBXNativeTarget "RxTimesTableUITests" */;
 			buildPhases = (
-				F71F5CF0F4D1A1EBAB7D1983 /* [CP] Check Pods Manifest.lock */,
+				BABD9DEFC071AA8A28C7D898 /* [CP] Check Pods Manifest.lock */,
 				3E7D5B1623F38FAF00AD456B /* Sources */,
 				3E7D5B1723F38FAF00AD456B /* Frameworks */,
 				3E7D5B1823F38FAF00AD456B /* Resources */,
-				B471D9B0EAFA7A0B2A10CBF7 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -330,7 +328,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1250670AE91B5D96A620F774 /* [CP] Check Pods Manifest.lock */ = {
+		4F3D58A0C5F7289F757E85AC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -352,41 +350,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		79E12BAD7BC2BEA21A3372D5 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RxTimesTable/Pods-RxTimesTable-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RxTimesTable/Pods-RxTimesTable-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxTimesTable/Pods-RxTimesTable-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		B471D9B0EAFA7A0B2A10CBF7 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RxTimesTable-RxTimesTableUITests/Pods-RxTimesTable-RxTimesTableUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-RxTimesTable-RxTimesTableUITests/Pods-RxTimesTable-RxTimesTableUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-RxTimesTable-RxTimesTableUITests/Pods-RxTimesTable-RxTimesTableUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		BD99772EADECABC169A43E3C /* [CP] Check Pods Manifest.lock */ = {
+		9FDDA9D925DA1C07A5D0E58B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -408,7 +372,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F71F5CF0F4D1A1EBAB7D1983 /* [CP] Check Pods Manifest.lock */ = {
+		BABD9DEFC071AA8A28C7D898 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -612,7 +576,7 @@
 		};
 		3E7D5B2423F38FAF00AD456B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AFAEAAB9A00CFDBFA1C53926 /* Pods-RxTimesTable.debug.xcconfig */;
+			baseConfigurationReference = 38391BAC9D55603306E7ACC4 /* Pods-RxTimesTable.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -631,7 +595,7 @@
 		};
 		3E7D5B2523F38FAF00AD456B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B4C460784708FB753F4F166F /* Pods-RxTimesTable.release.xcconfig */;
+			baseConfigurationReference = ADD322CD2A712863DB74E87D /* Pods-RxTimesTable.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -650,7 +614,7 @@
 		};
 		3E7D5B2723F38FAF00AD456B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAEEFEC76A4FA0A65748B4AD /* Pods-RxTimesTableTests.debug.xcconfig */;
+			baseConfigurationReference = A9D50EEA5A40573A8EFB70BB /* Pods-RxTimesTableTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -673,7 +637,7 @@
 		};
 		3E7D5B2823F38FAF00AD456B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8F3786F7EE8824EEB3787C92 /* Pods-RxTimesTableTests.release.xcconfig */;
+			baseConfigurationReference = A3980938E2E0BF92B49CEA81 /* Pods-RxTimesTableTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -696,7 +660,7 @@
 		};
 		3E7D5B2A23F38FAF00AD456B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2FE96DD1D4FA250362ED44CF /* Pods-RxTimesTable-RxTimesTableUITests.debug.xcconfig */;
+			baseConfigurationReference = CB46FCAE4D43DE4F2A11CF3F /* Pods-RxTimesTable-RxTimesTableUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -717,7 +681,7 @@
 		};
 		3E7D5B2B23F38FAF00AD456B /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F9DE78DB59AADC475A97A2F2 /* Pods-RxTimesTable-RxTimesTableUITests.release.xcconfig */;
+			baseConfigurationReference = DBBDC18FF39D038D73E71931 /* Pods-RxTimesTable-RxTimesTableUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
